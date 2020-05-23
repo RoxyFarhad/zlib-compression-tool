@@ -29,7 +29,10 @@ A way to rememdy this is if there are a set domain of values of file sizes, to p
 Testing
 --------
 
-There are a few files in the directory that I used to test: hello.txt, cyborg.html (this is a wget of your website), file.txt (a dummy file with 1GB of test)
+There are a few files in the directory that I used to test: hello.txt, cyborg.html (this is a wget of your website), and i also created file.txt (a dummy file with 1GB of test) using the command: 
+	dd if=/dev/zero of=file.txt count=1024 bs=1048576
+
+The file.txt was too large to upload to the github directory. 
 
 To test just the compression algorithm: openssl zlib -d < hello.txt.z
 
@@ -39,3 +42,4 @@ I then ran the command:
 
 If there was a print to the screen then the decompressed algorithm was not working correctly. 
 
+One of the limitations of my code is that if you supply a file to be decompressed that is not in the correct format for decompression, it will still create a filename (or overwrite a file with that filename) with an empty file.
