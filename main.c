@@ -36,7 +36,6 @@ int main(int argc, char **argv) {
 	} 
 
 	// check its not a directory 
-
 	int status; 
 	struct stat st_buf; 
 	status = stat (filename, &st_buf); 
@@ -65,7 +64,7 @@ int main(int argc, char **argv) {
 
 		char outFileName[strlen(fileOutName) + strlen(ext) + 2]; 
 		sprintf(outFileName, "%s%s.z", fileOutName, ext); 
-		
+
 		compressMain(fIn, outFileName);
 	} 
 	else if(strcmp(mode, "decompress") == 0) {
