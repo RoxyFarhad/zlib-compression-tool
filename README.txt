@@ -5,8 +5,11 @@ Intro
 
 This is a simple file compressor / decompressor built on zlib for any type of dot file i.e. it cannot compress directories. 
 
-Once in the directory of the repo, you can run the command main <filename> <mode> (where main in the executable) to start the program. 
+Once in the directory of the repo, you can run the command main to link files and compile the executable. 
+To run the program: main <filename> <mode> (where main in the executable) to start the program. 
 Mode must also be specified by "compress" or "decompress". 
+
+The command make clean will remove all the compressed files, as well Makefile generated files from the directory. 
 
 One of the limitations of the program is that the maximum file size that can be inputted in the program is 1GB. This is because this is the maximum size of arrays in C. 
 
