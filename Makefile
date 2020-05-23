@@ -16,4 +16,4 @@ zlibfunc.o: zlibfunc.c zlibfunc.h
 	$(CC) -c $(CFLAGS) zlibfunc.c
 
 clean:
-	rm -f $(TARGET) *.o *.txt.gz *.txt.z
+	rm -f $(TARGET) *.o *.z *.txt.z
